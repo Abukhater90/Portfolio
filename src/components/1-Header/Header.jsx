@@ -10,20 +10,22 @@ const [showModal , setShowModal]= useState(false)
     <header className='flex'>
 
 
-       <button className='menu' 
-       onClick={() => {setShowModal(true)}}>
-        show model
+       <button className='menu icon-menu flex' 
+       onClick={() => {
+        setShowModal(true)}}>
+      
       </button>
 
 
 
-            <div/>
+      <div/>
 
 
 
 
       < nav>
       <ul className='flex'>
+      
           <li><a href="About">About</a></li>
           <li><a href="Articles">Articles</a></li>
           <li><a href="Projects">Projects</a></li>
@@ -32,8 +34,8 @@ const [showModal , setShowModal]= useState(false)
         </ul>
       </nav>
 
-      <button>
-        light
+      <button className='mode flex'>
+    <span className='icon-moon-o'></span>
       </button>
 
 
@@ -43,6 +45,10 @@ const [showModal , setShowModal]= useState(false)
   
 <div className="fixed">
 <ul className='modal'>
+
+<li ><button className='icon-cross' onClick={() =>{ setShowModal(false)}} />
+</li>
+
     <li><a href="">About</a></li>
     <li><a href="">Articles</a></li>
     <li><a href="">Projects</a></li>
@@ -54,6 +60,11 @@ const [showModal , setShowModal]= useState(false)
 ) }
 
     
+
+
+
+
+
     </header>
   );
 }
